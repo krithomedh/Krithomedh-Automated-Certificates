@@ -57,7 +57,7 @@ def generate(name,team,event,date,folder_name=None):
         draw.text(xy=(2100,2060),text=date,fill="#000000",font=font1,anchor="mm",align="center",stroke_width=1)
 
         # Check Flag: flag:0 -> show images flag:1 -> upload images onto Gdrive 
-        if folder_name==None: img.show()
+        if folder_name==None: img.save("preview.png")
         else:
             img_file = io.BytesIO()
             img.save(img_file, 'PNG')
