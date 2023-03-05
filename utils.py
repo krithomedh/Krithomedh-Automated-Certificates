@@ -5,8 +5,8 @@ from PIL import Image, ImageDraw, ImageFont
 import io,streamlit as st
 
 # Fonts: SnellBoundhand -> name , Times New roman -> content
-font=ImageFont.truetype(r"fonts\SnellRoundhand-BoldScript.otf",150,encoding="unic")
-font1=ImageFont.truetype(r"fonts\Times New Roman Font.ttf",110,encoding="unic")
+font=ImageFont.FreeTypeFont(r"fonts\SnellRoundhand-BoldScript.otf",150,encoding="unic")
+font1=ImageFont.FreeTypeFont(r"fonts\Times New Roman Font.ttf",110,encoding="unic")
 
 # Google Oauth
 CLIENT_SECRET_FILE='client_secret_oauth.json'
