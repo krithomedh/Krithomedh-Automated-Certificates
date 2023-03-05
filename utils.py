@@ -44,7 +44,7 @@ def generate(name,team,event,date,folder_name=None):
     for name,team in zip(name,team):
         
         # opens and creates an object: img, draw
-        img=Image.open(r"images\participation.png")
+        img=Image.open(r"images/participation.png")
         draw=ImageDraw.Draw(img)
 
         # modify name: call funtion modifyText
