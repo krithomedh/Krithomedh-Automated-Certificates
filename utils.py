@@ -38,7 +38,7 @@ def generate(name,team,event,date,folder_name=None):
     # Check folder
     if folder_name!=None: 
         folder=createFolder(folder_name) # call function to create a folder in GDrive and return link 
-        st.success(f"{folder_name} is created in Certificates Gdrive folder")
+        st.success("Folder created in G-Drive")
         
     st.warning("Generating Certificates ",icon="⏳")
     for name,team in zip(name,team):
@@ -57,7 +57,7 @@ def generate(name,team,event,date,folder_name=None):
         draw.text(xy=(2100,2060),text=date,fill="#000000",font=font1,anchor="mm",align="center",stroke_width=1)
 
         # Check Flag: flag:0 -> show images flag:1 -> upload images onto Gdrive 
-        if folder_name==None: img.save("preview.png")
+        if folder_name==None: st.image(img, caption='Preview')
         else:
             img_file = io.BytesIO()
             img.save(img_file, 'PNG')
@@ -68,7 +68,7 @@ def generate(name,team,event,date,folder_name=None):
             file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
             # print(F'File ID: {file.get("id")}')
         
-    st.success("Certificates Generated")
+    if folder_name!=None: st.success("Certificates Generated")
 
         
 
