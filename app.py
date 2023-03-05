@@ -7,7 +7,7 @@ load_dotenv()
 
 # Get Password
 key = os.environ['PASSWORD']
-key=st.secrets["PASSSWORD"]
+key=st.secrets["PASSWORD"]
 
 # TODO
 #4. deploy
